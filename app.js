@@ -1,6 +1,7 @@
 // require related modules used in the project
 const express = require('express')
 const exphbs = require('express-handlebars')
+const bodyparser = require('body-parser')
 const app = express()
 const port = 3000
 
@@ -11,6 +12,8 @@ app.set('view engine', 'handlebars')
 // setting static source
 app.use(express.static('public'))
 
+// use body-parser
+app.use(bodyparser.urlencoded({ extended: true }))
 
 // setting route
 app.get('/', (req, res) => {
