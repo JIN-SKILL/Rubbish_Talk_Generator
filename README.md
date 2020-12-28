@@ -1,11 +1,10 @@
 # 密碼產生器
 使用 Express.js 建置的幹話產生器，誰都可以試試看。
 
-![Password_Generator]()
+![Password_Generator](https://raw.githubusercontent.com/JIN-SKILL/Example_Image/main/Rubbish_Talk_Generator.gif)
 
 ## 網站功能
-+ 產生幹話
-
++ 一共有三種職業別, 能分別對該職業生成幹話語句
 
 ## 使用工具
 + Node.js 14.15.3

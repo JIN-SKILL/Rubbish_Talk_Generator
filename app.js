@@ -3,6 +3,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyparser = require('body-parser')
 const generateBullshit = require('./generate_bullshit.js')
+const Handlebars = require('handlebars')
 const app = express()
 const port = 3000
 
@@ -13,6 +14,11 @@ app.set('view engine', 'handlebars')
 // setting static source
 app.use(express.static('public'))
 
+// register handlebars
+Handlebars.registerHelper('ifMatch', function (select, value, options) {
+  if (select === value) return options.fn(this)
+})
+
 // use body-parser
 app.use(bodyparser.urlencoded({ extended: true }))
 
@@ -22,9 +28,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  const option = req.body.profession
-  const bullshit = generateBullshit(option)
-  res.render('index', { bullshit: bullshit})
+  const select = req.body.profession
+  const rubbishTalk = generateBullshit(select)
+  res.render('index', { rubbishTalk, select })
 })
 
 // setting listen

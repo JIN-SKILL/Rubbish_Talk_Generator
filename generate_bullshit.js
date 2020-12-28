@@ -10,11 +10,22 @@ function generateBullshit(option) {
     founder: ['週末加班', '要能賺錢','想個 business model','找 VC 募錢']
   }
   const phrase = ['很簡單','很容易','很快','很正常']
-  let str = ''
-  option === Object.keys(task)[0] ? str += `身為一個工程師${randomPick(task.developer)}${randomPick(phrase)}吧!` : str
-  option === Object.keys(task)[1] ? str += `身為一個設計師${randomPick(task.designer)}${randomPick(phrase)}吧!` : str
-  option === Object.keys(task)[2] ? str += `身為一個創業家${randomPick(task.founder)}${randomPick(phrase)}吧!` : str
-  return str
+  let rubbishTalk = ''
+  switch (option) {
+    case 'developer':
+      rubbishTalk += `身為一個工程師${randomPick(task.developer)}${randomPick(phrase)}吧!`
+      break
+    case 'designer':
+      rubbishTalk += `身為一個設計師${randomPick(task.designer)}${randomPick(phrase)}吧!`
+      break
+    case 'founder':
+      rubbishTalk += `身為一個創業家${randomPick(task.founder)}${randomPick(phrase)}吧!`
+      break
+    default:
+      rubbishTalk += '請選擇說幹話的對象!'
+      break
+  }
+  return rubbishTalk
 }
 
 module.exports = generateBullshit
