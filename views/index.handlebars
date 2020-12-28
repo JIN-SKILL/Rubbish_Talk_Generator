@@ -2,56 +2,57 @@
   <div class="row">
     <div class="col-12 bg-light p-2 rounded">
       <h1 class="text-center mt-5">你想對誰說幹話?</h1>
-      <div class="row mt-5">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <img src="/imgs/angry-developer.jpg" class="img-fluid mb-3" alt="...">
-              <div class="form-check d-flex justify-content-center">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label ms-2" for="flexRadioDefault1">
-                  工程師
-                </label>
+      <form method="POST" action="/">
+        <div class="row mt-5">
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="/imgs/angry-developer.jpg" class="img-fluid mb-3" alt="...">
+                <div class="form-check d-flex justify-content-center">
+                  <input class="form-check-input" type="radio" name="profession" id="developer" value="developer">
+                  <label class="form-check-label ms-2" for="developer">
+                    工程師
+                  </label>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <img src="/imgs/angry-designer.jpg" class="img-fluid mb-3" alt="...">
-              <div class="form-check d-flex justify-content-center">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label ms-2" for="flexRadioDefault1">
-                  設計師
-                </label>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="/imgs/angry-designer.jpg" class="img-fluid mb-3" alt="...">
+                <div class="form-check d-flex justify-content-center">
+                  <input class="form-check-input" type="radio" name="profession" id="designer" value="designer">
+                  <label class="form-check-label ms-2" for="designer">
+                    設計師
+                  </label>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <img src="/imgs/angry-founder.jpg" class="img-fluid mb-3" alt="...">
-              <div class="form-check d-flex justify-content-center">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label ms-2" for="flexRadioDefault1">
-                  創業家
-                </label>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="/imgs/angry-founder.jpg" class="img-fluid mb-3" alt="...">
+                <div class="form-check d-flex justify-content-center">
+                  <input class="form-check-input" type="radio" name="profession" id="founder" value="founder">
+                  <label class="form-check-label ms-2" for="founder">
+                    創業家
+                  </label>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-2 mt-5 text-end">
-          <input class="btn btn-primary" type="button" value="產生幹話">
-        </div>
-        <div class="col-8 mt-5">
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 80px"></textarea>
-            <label for="floatingTextarea">Go</label>
+          <div class="col-2 mt-4 text-end">
+            <button class="btn btn-primary" type="submit">產生幹話</button>
+          </div>
+          <div class="col-8 my-4">
+            <div class="form-floating">
+              <textarea class="form-control pt-1" placeholder="123" id="floatingTextarea" style="height: 1em">{{ bullshit }}</textarea>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
